@@ -2,9 +2,9 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'student',
+  user: 'root',
   password: 'student',
-  database: 'YOUR_DATABASE_NAME_HERE'
+  database: 'Cows'
 });
 
 connection.connect((err) => {
@@ -16,6 +16,7 @@ connection.connect((err) => {
 });
 
 // Your Database Queries Here!!
+//get all cow names. this is the default for the page
 
 
 

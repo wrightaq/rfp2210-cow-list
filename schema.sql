@@ -1,6 +1,9 @@
--- ATTN WINDOWS USERS: Some of you might have an easier time just copying and pasting the lines below in to your mysql shell
+CREATE DATABASE IF NOT EXISTS Cows;
+USE Cows;
 
--- YOUR CODE GOES HERE
--- CREATE YOUR DATABASE
--- CREATE YOUR TABLES
--- ADD RECORDS TO YOUR TABLE
+CREATE TABLE IF NOT EXISTS cow_names (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL,
+  description VARCHAR(300),
+  PRIMARY KEY(id)
+);
