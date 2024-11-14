@@ -24,5 +24,5 @@ connection.connect((err) => {
 
 // Don't forget to export your functions!
 module.exports = {
-  db: connection
+
 };

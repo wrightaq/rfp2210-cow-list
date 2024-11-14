@@ -1,14 +1,13 @@
 import React from 'react';
-import axios from 'Axios';
+import axios from 'axios';
 
-const CowList = ({names}) => {
+const CowList = ({ names }) => {
   console.log("names:", names)
-  const cowNames = names;
-  const cowNameList = cowNames.map((cowName) =>
-    <li>{cowName}</li>
+  const nameList = names.map((name) =>
+    <li>{name}</li>
   );
   return (
-    <ol>{cowNameList}</ol>
+    <ol>{nameList}</ol>
   );
 };
 
