@@ -1,7 +1,18 @@
 import React from 'react';
+import axios from 'Axios';
 import CowList from './CowList.jsx';
 
 const App = () => {
+
+  const getNames = async () => {
+    try {
+      const res = await axios.get("http://localhost:3000/");
+      return res.data;
+    } catch (err) {
+      console.log(err);
+      return err;
+    }
+  };
 
   return (
     <div>
@@ -10,7 +21,7 @@ const App = () => {
         <input placeholder="cow description"/>
         <button>Submit</button>
       </div>
-      <CowList />
+      <CowList const names={getNames}/>
     </div>
   )
 };

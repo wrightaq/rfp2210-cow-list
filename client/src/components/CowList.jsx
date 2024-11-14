@@ -1,13 +1,15 @@
 import React from 'react';
+import axios from 'Axios';
 
-const CowList = () => {
-  //select all names from cows in database
-
+const CowList = ({names}) => {
+  console.log("names:", names)
+  const cowNames = names;
+  const cowNameList = cowNames.map((cowName) =>
+    <li>{cowName}</li>
+  );
   return (
-    <div>
-      cow list will be here
-    </div>
-  )
+    <ol>{cowNameList}</ol>
+  );
 };
 
 export default CowList;
