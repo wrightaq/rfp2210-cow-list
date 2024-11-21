@@ -8,7 +8,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/1")
+      .get("http://localhost:3000/")
       .then((res) => {
         const data = res.data;
         console.log("data:", data)
